@@ -3,97 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <title>IT Portafolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1 id="title">Mi Portafolio</h1>
+        <h1 id="title">IT Portafolio</h1>
         <div class="controls">
             <button onclick="toggleTheme()">🌙 / ☀️</button>
-            <button onclick="toggleLanguage()">ES / EN</button>
         </div>
     </header>
 
     <main>
         <section id="sobre-mi">
-            <h2>Sobre Mí</h2>
+            <h2>Sobre Mi</h2>
             <div class="content">
                 <img src="perfil.jpg" alt="Mi foto" class="perfil-img" onclick="ampliarImagen(this)">
-                <p id="bio">Soy un profesional con experiencia en...</p>
+                <div class="bio">
+                    <p>Mi nombre es Daniel Joven, soy de Zaragoza, España. Trabajo como administrador de sistemas Linux desde 2016 y en entornos cloud en AWS desde 2019.</p>
+                    <p>
+                        Me considero una persona curiosa, siempre en busca de aprender, hacer preguntas y superar nuevos retos. Disfruto jugar al tenis, tocar el piano y explorar distintas formas de arte,
+                        especialmente asistiendo a conciertos de orquesta en el Auditorio de Zaragoza.
+                    </p>
+                    <p>
+                        A nivel profesional, mis principales responsabilidades incluyen brindar soporte técnico a distintos clientes, tanto nacionales como internacionales, como Zentyal.
+                        También diseño, creo y mantengo entornos cloud en AWS, optimizando su rendimiento y seguridad. Me apasiona la automatización de flujos de trabajo mediante herramientas como
+                        Bash scripting, Python, Ansible y GitHub Actions.
+                    </p>
+                    <h3>Certificaciones</h3>
+                    <ul>
+                        <li>ZeCA (2015)</li>
+                        <li>RHCSA 7 (2015)</li>
+                        <li>LPIC-2 (2016)</li>
+                        <li>MySQL Database Administrator 5.6 (2017)</li>
+                        <li>RHCE (2018)</li>
+                        <li>Red Hat Specialist in Ansible Automation (2019)</li>
+                        <li>CKA (2022)</li>
+                        <li>B2 First de Cambridge (2022)</li>
+                    </ul>
+                    <h3>Cursos Adicionales</h3>
+                    <ul>
+                        <li>DCA (2018)</li>
+                        <li>Red Hat Specialist in OpenShift Administration (2020)</li>
+                        <li>AWS SysOps Administrator Associate (2021)</li>
+                        <li>PCAT (2024)</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <section id="curriculum">
-            <h2>Curriculum</h2>
-            <a href="mi-cv.pdf" target="_blank" class="button">Descargar CV</a>
+        <section id="apuntes" class="discreto">
+            <h2>Apuntes</h2>
+            <p><a href="https://ejemplo.com/apuntes" target="_blank" class="button">Mis apuntes y notas</a></p>
         </section>
 
         <section id="proyectos">
             <h2>Proyectos</h2>
             <div class="proyectos-container">
                 <div class="proyecto">
-                    <img src="proyecto1.jpg" alt="Proyecto 1" class="proyecto-img" onclick="ampliarImagen(this)">
+                    <img src="zentyal-logo.png" alt="Zentyal" class="proyecto-img" onclick="ampliarImagen(this)">
                     <p class="descripcion">
-                        <a href="https://zentyal-aws.projects.domain.es/" target="_blank">Servidor de correo con Zentyal en AWS</a>
+                        <a href="https://zentyal-aws.projects.djoven.es/" target="_blank">Servidor de correo con Zentyal en AWS</a>
                     </p>
                     <div class="description">
-                        Este proyecto explica como configurar un servicio de correo seguro usando Zentyal en el proveedor cloud de AWS.
-                    </div>
-                    <div class="etiquetas">
-                        <a href="https://www.zentyal.com/" class="etiqueta" target="_blank">Zentyal</a>
-                        <a href="https://doc.zentyal.org/es/firststeps.html#network-configuration-with-zentyal" class="etiqueta" target="_blank">Network</a>
-                        <a href="https://doc.zentyal.org/es/logs.html" class="etiqueta" target="_blank">Logs</a>
-                        <a href="https://doc.zentyal.org/es/firewall.html" class="etiqueta" target="_blank">Firewall</a>
-                        <a href="https://doc.zentyal.org/es/software.html" class="etiqueta" target="_blank">Software</a>
-                        <a href="https://doc.zentyal.org/es/ntp.html" class="etiqueta" target="_blank">NTP</a>
-                        <a href="https://doc.zentyal.org/es/dns.html" class="etiqueta" target="_blank">DNS</a>
-                        <a href="https://doc.zentyal.org/es/directory.html" class="etiqueta" target="_blank">Controlador de dominio</a>
-                        <a href="https://doc.zentyal.org/es/mail.html" class="etiqueta" target="_blank">Mail</a>
-                        <a href="https://doc.zentyal.org/es/mail.html#cliente-de-webmail" class="etiqueta" target="_blank">Webmail</a>
-                        <a href="https://doc.zentyal.org/es/antivirus.html" class="etiqueta" target="_blank">Antivirus</a>
-                        <a href="https://doc.zentyal.org/es/mailfilter.html" class="etiqueta" target="_blank">Mailfilter</a>
-                        <a href="https://doc.zentyal.org/es/ca.html" class="etiqueta" target="_blank">CA</a>
-                        <a href="https://doc.zentyal.org/es/vpn.html" class="etiqueta" target="_blank">OpenVPN</a>
-                        <a href="https://docs.aws.amazon.com/es_es/Route53/latest/DeveloperGuide/Welcome.html" class="etiqueta" target="_blank">Amazon Route53</a>
-                        <a href="https://docs.aws.amazon.com/es_es/vpc/latest/userguide/what-is-amazon-vpc.html" class="etiqueta" target="_blank">Amazon VPC</a>
-                        <a href="https://aws.amazon.com/es/kms/" class="etiqueta" target="_blank">Amazon KMS</a>
-                        <a href="https://docs.aws.amazon.com/es_es/AWSEC2/latest/UserGuide/concepts.html" class="etiqueta" target="_blank">Amazon EC2</a>
-                        <a href="https://docs.aws.amazon.com/es_es/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html" class="etiqueta" target="_blank">Amazon CloudWatch</a>
-                        <a href="https://docs.aws.amazon.com/es_es/sns/latest/dg/welcome.html" class="etiqueta" target="_blank">Amazon SNS</a>
-                    </div>
-                </div>
-
-                <div class="proyecto">
-                    <img src="prod-aws-n4g-v1.0.png" alt="Proyecto 2" class="proyecto-img" onclick="ampliarImagen(this)">
-                    <p class="descripcion">
-                        <a href="https://aws.projects.domain.es/" target="_blank">API HTTP pública en AWS con CI/CD</a>
-                    </p>
-                    <div class="description">
-                        Este proyecto muestra cómo desplegar una API HTTP sencilla en AWS, además también mostrará como implementar un CI/CD completo.
-                    </div>
-                    <div class="etiquetas">
-                        <a href="https://docs.aws.amazon.com/es_es/Route53/latest/DeveloperGuide/Welcome.html" class="etiqueta" target="_blank">Amazon Route53</a>
-                        <a href="https://aws.amazon.com/api-gateway/" class="etiqueta" target="_blank">Amazon API Gateway</a>
-                        <a href="https://aws.amazon.com/lambda/" class="etiqueta" target="_blank">AWS Lambda</a>
-                        <a href="https://docs.aws.amazon.com/es_es/aurora/" class="etiqueta" target="_blank">Amazon RDS Aurora</a>
-                        <a href="https://docs.aws.amazon.com/es_es/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html" class="etiqueta" target="_blank">Amazon CloudWatch</a>
-                        <a href="https://docs.github.com/en/actions" class="etiqueta" target="_blank">GitHub Actions</a>
-                        <a href="https://docs.aws.amazon.com/es_es/codedeploy/" class="etiqueta" target="_blank">AWS CodeDeploy</a>
+                        Despliegue de un servidor Zentyal como servidor de correo para un entorno de producción en el proveedor cloud AWS.
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Modal para visualizar imágenes ampliadas -->
-        <div id="modal-imagen" class="modal">
-            <span class="cerrar" onclick="cerrarModal()">&times;</span>
-            <img class="modal-contenido" id="imagen-ampliada">
-        </div>
-
-        <section id="apuntes">
-            <h2>Apuntes</h2>
-            <p><a href="https://ejemplo.com/apuntes" target="_blank" class="button">Mis apuntes y notas</a></p>
         </section>
     </main>
 

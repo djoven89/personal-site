@@ -151,20 +151,51 @@ h2 {
 /* Sobre Mi Section */
 #sobre-mi .content {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 #sobre-mi img {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
-    margin-right: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    flex-shrink: 0;
+}
+
+#sobre-mi img:hover {
+    transform: scale(1.1);
+}
+
+#sobre-mi .bio {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    max-width: 90%; /* Asegura que use todo el ancho disponible */
 }
 
 #sobre-mi p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+#sobre-mi h3 {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #007bff;
+}
+
+#sobre-mi ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+#sobre-mi ul li {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.6;
+    margin-bottom: 5px;
 }
 
 /* Links & Buttons */
